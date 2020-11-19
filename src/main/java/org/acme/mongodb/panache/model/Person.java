@@ -23,7 +23,24 @@ public class Person extends BaseModel {
     
     
     public enum Status {
-        ALIVE,
-        DEATH;
+        ALIVE("He's Alive!"),
+        DEATH("Poor guy!");
+        
+        private final String value;
+
+        private Status(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        @Override
+        public String toString() {
+            return this.value;
+        }
+        
+        
     }
 }
